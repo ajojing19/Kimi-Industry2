@@ -1,0 +1,640 @@
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: repeating-radial-gradient(circle at center center, rgb(31, 31, 31) 0px, rgb(31, 31, 31) 33px,rgb(26, 26, 26) 33px, rgb(26, 26, 26) 79px,rgb(20, 20, 20) 79px, rgb(20, 20, 20) 88px); background-size: 56px 56px;
+}
+
+.container{
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+.ul-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.347);
+    box-shadow: 0px 8px 7px -3px rgba(132,114,114,0.68);
+    -webkit-box-shadow: 0px 8px 7px -3px rgba(132,114,114,0.68);
+    -moz-box-shadow: 0px 8px 7px -3px rgba(132,114,114,0.68);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.li-navbar{
+    list-style-type: none;
+    padding: 26px;
+    margin: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+.a-navbar {
+    color:rgb(204, 204, 204);
+    text-decoration: none;
+    font-family: "REM", sans-serif;
+    position: relative;
+}
+
+.a-navbar::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.a-navbar:hover::before{
+    width: 100%;
+}
+
+.a-navbar:hover{
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+}
+
+.container-content {
+    height: 100vh;
+    display: flexbox;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.h1-content {
+    font-family: "REM", sans-serif;
+    font-size: 10vh;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.849);
+}
+
+.active {
+    font-family: "REM", sans-serif;
+    font-size: 10vh;
+    color: rgb(188, 38, 68);;
+}
+
+.p-content {
+    display: grid;
+    justify-content: center;
+    margin-top: 0;
+    font-family: "REM", sans-serif;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.849);
+}
+
+.content-btn {
+    width: 75vw;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn-content {
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(188, 38, 68, 0.619);
+    font-family: "REM", sans-serif;
+    color: white;
+}
+
+.btn-content:hover{
+    background-color: #4e4b4b;
+    color: #313030;
+    transition: all 0.2s;
+}
+
+.about {
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-top: 10px;
+}
+
+.card-about{
+    display: grid;
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 129.5vh;
+    font-family: "REM", sans-serif;
+    color: rgb(255, 245, 245);
+    background-color: #090909;
+}
+
+.card-img{
+    display: grid;
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: #090909;
+}
+
+.active-about{
+    color: rgb(188, 38, 68);
+}
+
+.h2-about{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-about-first{
+    padding: 10px;
+}
+
+.p-about {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-btn{
+    width: 52vw;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn-about {
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(188, 38, 68, 0.697);
+    font-family: "REM", sans-serif;
+    color: white;
+}
+
+.btn-about:hover{
+    background-color: #4e4b4b;
+    color: #313030;
+    transition: all 0.2s;
+}
+
+.about-kimi{
+   padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 160px;
+    background-color: #1f1f1f; 
+    display: grid;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.testimoni {
+    border-radius: 15px;
+    box-shadow: -6px 4px 8px -2px rgba(0,0,0,0.8);
+    -webkit-box-shadow: -6px 4px 8px -2px rgba(0,0,0,0.8);
+    -moz-box-shadow: -6px 4px 8px -2px rgba(0,0,0,0.8);
+}
+
+.kimi{
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+}
+
+.bio-kimi {
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+    display: flexbox;
+    background-color: #1f1f1f; 
+    justify-content: center;
+    align-items: center;
+}
+
+.title-kimi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "REM", sans-serif;
+    color: white;
+    font-size: 50px;
+    font-family: "REM", sans-serif;
+}
+
+.p-kimi{
+    color: white;
+    font-size: 27px;
+    font-family: "REM", sans-serif;
+}
+
+.pencapaian-kimi{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    color: rgba(188, 38, 68, 0.653);
+    font-size: 35px;
+    font-family: "REM", sans-serif;
+}
+
+.kimi-btn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn-kimi {
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgba(188, 38, 68, 0.675);
+    font-family: "REM", sans-serif;
+    color: white;
+}
+
+.btn-kimi:hover{
+    background-color: #4e4b4b;
+    color: #313030;
+    transition: all 0.2s;
+}
+
+.bio-pino {
+    background-color: #1f1f1f;
+    display: grid;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.title-pino{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "REM", sans-serif;
+    color: white;
+    font-size: 50px;
+    font-family: "REM", sans-serif;
+}
+
+
+
+.about-pino {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 160px;
+    background-color: #1f1f1f;
+    display: grid;
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.pino{
+    border-radius: 10px;
+    width: 400px;
+    height: 600px;
+}
+
+.p-pino{
+    color: white;
+    font-size: 27px;
+    font-family: "REM", sans-serif;
+}
+
+.pencapaian-pino{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    color: rgba(188, 38, 68, 0.653);
+    font-size: 30px;
+    font-family: "REM", sans-serif;
+}
+
+.pino-btn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 4px;
+}
+
+.btn-pino {
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(188, 38, 68, 0.675);
+    font-family: "REM", sans-serif;
+    color: white;
+}
+
+.btn-pino:hover{
+    background-color: #4e4b4b;
+    color: #313030;
+    transition: all 0.2s;
+}
+
+.footer {
+    background-color: rgb(241, 255, 250);
+    display: grid;
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+.container-footer{
+    background-color: antiquewhite;
+}
+
+.icon-footer{
+    background-color: rgb(241, 255, 250);
+}
+
+.link {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand {
+    padding: 5px;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.container-icon-footer{
+    display: flex;
+    padding: 7px;
+}
+
+.h1-icon{
+    font-family: "REM", sans-serif;
+    font-size: 25px;
+}
+
+.fContainer-cards{
+    padding-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.container-cards{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards{
+    height: 340px;
+    width: 280px;
+    background-color: #000000eb;
+    box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
+    /* border: 1px solid white; */
+    border-radius: 15px;
+    padding: 40px;
+
+}
+
+.h1-cards{
+    color: white;
+    font-size: 20px;
+    font-family: "REM", sans-serif;
+}
+
+.basic{
+    color: rgb(17, 176, 255);
+}
+
+.premium{
+    color: rgb(107, 10, 159);
+}
+
+.vip {
+    color: rgb(246, 255, 0);
+}
+
+.h2-cards-basic{
+    color: rgb(17, 176, 255);
+    font-size: 15px;
+    font-family: "REM", sans-serif;
+}
+.h2-cards-premium{
+    color: rgb(107, 10, 159);
+    font-size: 15px;
+    font-family: "REM", sans-serif;
+}
+.h2-cards-vip{
+    color: rgb(246, 255, 0);
+    font-size: 15px;
+    font-family: "REM", sans-serif;
+}
+
+.ul-cards{
+    padding-left: 12px;
+    margin-top: 40px;
+    color: white; 
+}
+
+.li-cards{
+    margin-top: 10px;
+    font-family: "REM", sans-serif;
+    font-weight: 120;
+}
+
+.btn-cards{
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: rgba(188, 38, 68, 0.675);
+    border: none;
+    outline: none;
+    margin-top: 60px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-cards:hover{
+    background-color: #4e4b4b;
+    color: #313030;
+    transition: all 0.2s;
+}
+
+.container-back{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back{
+    font-family: "REM", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.back:hover{
+    color: #4e4b4b;
+    transition: all 0.3s ease-in-out;
+}
+
+.h1-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "REM", sans-serif;
+    color:white;
+    font-size: 80px;
+}
+
+.fContainer-login{
+    padding-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login{
+    color: white;
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-login{
+    height: 410px;
+    width: 340px;
+    background-color: #000000eb;
+    box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 8px 8px 10px 0px rgba(0,0,0,0.75);
+    /* border: 1px solid white; */
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.username-login{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.h1-login{
+    color: white;
+    font-family: "REM", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+input {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: "REM", sans-serif;
+}
+
+.form-login input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(219, 218, 218);
+    border-radius: 20px;
+    padding: 20px 45px 20px 20px
+}
+
+.form-login input::placeholder{
+    color: rgb(11, 10, 10);
+}
+
+.forgot{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.a-forgot{
+    text-decoration: none;
+    color: white;
+    font-family: "REM", sans-serif;
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+.container-btn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    font-family: "REM", sans-serif;
+    background-color: rgba(188, 38, 68, 0.675);
+}
+
+.btn:hover{
+    background-color: #4e4b4b;
+    color: #313030;
+    transition: all 0.2s;
+}
+
+.register-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-login{
+    font-family: "REM",sans-serif;
+}
+
+.a-register{
+    font-family: "REM",sans-serif;
+    text-decoration: none;
+}
+
+
+
+
+
+
